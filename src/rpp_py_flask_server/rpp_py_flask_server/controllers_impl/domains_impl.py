@@ -9,7 +9,6 @@ def domains_post(repp_cltrid, repp_svcs, accept_language, epp_read_write_type, r
 
     r = EppResponseType()
     r.msg_q = EppMsgQType(1, 'ABC123')
-    # r.result = EppResultType(code=2000)
     r.result = [EppResultType(code=1000, msg='Command completed successfully')]
     r.tr_id = EppTrIDType(repp_cltrid, 'SV-ID-12345')
     r.res_data = DomainCreDataType(name=epp_read_write_type.domain_create.name,  cr_date=datetime.now(),

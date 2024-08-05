@@ -17,24 +17,24 @@ def contacts_id_delete(id, ):  # noqa: E501
 
     :param id: Object identifier
     :type id: str
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
     :param body: Default request body
     :type body: str
 
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
 
 
 
@@ -48,7 +48,7 @@ def contacts_id_delete(id, ):  # noqa: E501
 
 
     try:
-        return contacts_impl.contacts_id_delete(id, repp_cltrid, repp_svcs, accept_language, repp_svcs_ext, body)
+        return contacts_impl.contacts_id_delete(id, rpp_cltrid, rpp_svcs, accept_language, rpp_svcs_ext, body)
     except NameError as e:
         raise NotImplementedError(f"Missing module contacts_impl: {e}")
     except AttributeError as e:
@@ -62,18 +62,18 @@ def contacts_id_get(id, filter=None, val=None, ):  # noqa: E501
 
     :param id: Object identifier
     :type id: str
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
-    :param repp_auth_info: Object authorization details
-    :type repp_auth_info: str
-    :param repp_roid: Object linked to authorization
-    :type repp_roid: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
+    :param rpp_auth_info: Object authorization details
+    :type rpp_auth_info: str
+    :param rpp_roid: Object linked to authorization
+    :type rpp_roid: str
     :param filter: 
     :type filter: str
     :param val: 
@@ -84,12 +84,12 @@ def contacts_id_get(id, filter=None, val=None, ):  # noqa: E501
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
-    repp_auth_info = request.headers.get('repp_auth_info')
-    repp_roid = request.headers.get('repp_roid')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
+    rpp_auth_info = request.headers.get('rpp_auth_info')
+    rpp_roid = request.headers.get('rpp_roid')
 
 
 
@@ -107,7 +107,7 @@ def contacts_id_get(id, filter=None, val=None, ):  # noqa: E501
 
 
     try:
-        return contacts_impl.contacts_id_get(id, repp_cltrid, repp_svcs, accept_language, repp_svcs_ext, repp_auth_info, repp_roid, filter, val, body)
+        return contacts_impl.contacts_id_get(id, rpp_cltrid, rpp_svcs, accept_language, rpp_svcs_ext, rpp_auth_info, rpp_roid, filter, val, body)
     except NameError as e:
         raise NotImplementedError(f"Missing module contacts_impl: {e}")
     except AttributeError as e:
@@ -121,24 +121,24 @@ def contacts_id_head(id, ):  # noqa: E501
 
     :param id: Object identifier
     :type id: str
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
     :param body: Default request body
     :type body: str
 
     :rtype: Union[None, Tuple[None, int], Tuple[None, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
 
 
 
@@ -152,7 +152,7 @@ def contacts_id_head(id, ):  # noqa: E501
 
 
     try:
-        return contacts_impl.contacts_id_head(id, repp_cltrid, repp_svcs, accept_language, repp_svcs_ext, body)
+        return contacts_impl.contacts_id_head(id, rpp_cltrid, rpp_svcs, accept_language, rpp_svcs_ext, body)
     except NameError as e:
         raise NotImplementedError(f"Missing module contacts_impl: {e}")
     except AttributeError as e:
@@ -166,24 +166,24 @@ def contacts_id_patch(id, ):  # noqa: E501
 
     :param id: Object identifier
     :type id: str
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
     :param body: Default request body
     :type body: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
 
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
 
 
 
@@ -197,7 +197,7 @@ def contacts_id_patch(id, ):  # noqa: E501
 
 
     try:
-        return contacts_impl.contacts_id_patch(id, repp_cltrid, repp_svcs, accept_language, body, repp_svcs_ext)
+        return contacts_impl.contacts_id_patch(id, rpp_cltrid, rpp_svcs, accept_language, body, rpp_svcs_ext)
     except NameError as e:
         raise NotImplementedError(f"Missing module contacts_impl: {e}")
     except AttributeError as e:
@@ -211,30 +211,30 @@ def contacts_id_transfers_latest_delete(id, ):  # noqa: E501
 
     :param id: Object identifier
     :type id: str
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
-    :param repp_auth_info: Object authorization details
-    :type repp_auth_info: str
-    :param repp_roid: Object linked to authorization
-    :type repp_roid: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
+    :param rpp_auth_info: Object authorization details
+    :type rpp_auth_info: str
+    :param rpp_roid: Object linked to authorization
+    :type rpp_roid: str
     :param body: Default request body
     :type body: str
 
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
-    repp_auth_info = request.headers.get('repp_auth_info')
-    repp_roid = request.headers.get('repp_roid')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
+    rpp_auth_info = request.headers.get('rpp_auth_info')
+    rpp_roid = request.headers.get('rpp_roid')
 
 
 
@@ -250,7 +250,7 @@ def contacts_id_transfers_latest_delete(id, ):  # noqa: E501
 
 
     try:
-        return contacts_impl.contacts_id_transfers_latest_delete(id, repp_cltrid, repp_svcs, accept_language, repp_svcs_ext, repp_auth_info, repp_roid, body)
+        return contacts_impl.contacts_id_transfers_latest_delete(id, rpp_cltrid, rpp_svcs, accept_language, rpp_svcs_ext, rpp_auth_info, rpp_roid, body)
     except NameError as e:
         raise NotImplementedError(f"Missing module contacts_impl: {e}")
     except AttributeError as e:
@@ -264,30 +264,30 @@ def contacts_id_transfers_latest_get(id, ):  # noqa: E501
 
     :param id: Object identifier
     :type id: str
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
-    :param repp_auth_info: Object authorization details
-    :type repp_auth_info: str
-    :param repp_roid: Object linked to authorization
-    :type repp_roid: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
+    :param rpp_auth_info: Object authorization details
+    :type rpp_auth_info: str
+    :param rpp_roid: Object linked to authorization
+    :type rpp_roid: str
     :param body: Default request body
     :type body: str
 
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
-    repp_auth_info = request.headers.get('repp_auth_info')
-    repp_roid = request.headers.get('repp_roid')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
+    rpp_auth_info = request.headers.get('rpp_auth_info')
+    rpp_roid = request.headers.get('rpp_roid')
 
 
 
@@ -303,7 +303,7 @@ def contacts_id_transfers_latest_get(id, ):  # noqa: E501
 
 
     try:
-        return contacts_impl.contacts_id_transfers_latest_get(id, repp_cltrid, repp_svcs, accept_language, repp_svcs_ext, repp_auth_info, repp_roid, body)
+        return contacts_impl.contacts_id_transfers_latest_get(id, rpp_cltrid, rpp_svcs, accept_language, rpp_svcs_ext, rpp_auth_info, rpp_roid, body)
     except NameError as e:
         raise NotImplementedError(f"Missing module contacts_impl: {e}")
     except AttributeError as e:
@@ -317,30 +317,30 @@ def contacts_id_transfers_latest_put(id, ):  # noqa: E501
 
     :param id: Object identifier
     :type id: str
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
-    :param repp_auth_info: Object authorization details
-    :type repp_auth_info: str
-    :param repp_roid: Object linked to authorization
-    :type repp_roid: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
+    :param rpp_auth_info: Object authorization details
+    :type rpp_auth_info: str
+    :param rpp_roid: Object linked to authorization
+    :type rpp_roid: str
     :param body: Default request body
     :type body: str
 
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
-    repp_auth_info = request.headers.get('repp_auth_info')
-    repp_roid = request.headers.get('repp_roid')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
+    rpp_auth_info = request.headers.get('rpp_auth_info')
+    rpp_roid = request.headers.get('rpp_roid')
 
 
 
@@ -356,7 +356,7 @@ def contacts_id_transfers_latest_put(id, ):  # noqa: E501
 
 
     try:
-        return contacts_impl.contacts_id_transfers_latest_put(id, repp_cltrid, repp_svcs, accept_language, repp_svcs_ext, repp_auth_info, repp_roid, body)
+        return contacts_impl.contacts_id_transfers_latest_put(id, rpp_cltrid, rpp_svcs, accept_language, rpp_svcs_ext, rpp_auth_info, rpp_roid, body)
     except NameError as e:
         raise NotImplementedError(f"Missing module contacts_impl: {e}")
     except AttributeError as e:
@@ -370,30 +370,30 @@ def contacts_id_transfers_post(id, ):  # noqa: E501
 
     :param id: Object identifier
     :type id: str
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
-    :param repp_auth_info: Object authorization details
-    :type repp_auth_info: str
-    :param repp_roid: Object linked to authorization
-    :type repp_roid: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
+    :param rpp_auth_info: Object authorization details
+    :type rpp_auth_info: str
+    :param rpp_roid: Object linked to authorization
+    :type rpp_roid: str
     :param body: Default request body
     :type body: str
 
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
-    repp_auth_info = request.headers.get('repp_auth_info')
-    repp_roid = request.headers.get('repp_roid')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
+    rpp_auth_info = request.headers.get('rpp_auth_info')
+    rpp_roid = request.headers.get('rpp_roid')
 
 
 
@@ -409,7 +409,7 @@ def contacts_id_transfers_post(id, ):  # noqa: E501
 
 
     try:
-        return contacts_impl.contacts_id_transfers_post(id, repp_cltrid, repp_svcs, accept_language, repp_svcs_ext, repp_auth_info, repp_roid, body)
+        return contacts_impl.contacts_id_transfers_post(id, rpp_cltrid, rpp_svcs, accept_language, rpp_svcs_ext, rpp_auth_info, rpp_roid, body)
     except NameError as e:
         raise NotImplementedError(f"Missing module contacts_impl: {e}")
     except AttributeError as e:
@@ -421,24 +421,24 @@ def contacts_post():  # noqa: E501
 
      # noqa: E501
 
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
     :param body: Default request body
     :type body: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
 
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
 
 
 
@@ -451,7 +451,7 @@ def contacts_post():  # noqa: E501
 
 
     try:
-        return contacts_impl.contacts_post(repp_cltrid, repp_svcs, accept_language, body, repp_svcs_ext)
+        return contacts_impl.contacts_post(rpp_cltrid, rpp_svcs, accept_language, body, rpp_svcs_ext)
     except NameError as e:
         raise NotImplementedError(f"Missing module contacts_impl: {e}")
     except AttributeError as e:

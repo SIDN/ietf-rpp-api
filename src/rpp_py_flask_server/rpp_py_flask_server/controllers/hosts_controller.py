@@ -17,24 +17,24 @@ def hosts_id_delete(id, ):  # noqa: E501
 
     :param id: Object identifier
     :type id: str
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
     :param body: Default request body
     :type body: str
 
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
 
 
 
@@ -48,7 +48,7 @@ def hosts_id_delete(id, ):  # noqa: E501
 
 
     try:
-        return hosts_impl.hosts_id_delete(id, repp_cltrid, repp_svcs, accept_language, repp_svcs_ext, body)
+        return hosts_impl.hosts_id_delete(id, rpp_cltrid, rpp_svcs, accept_language, rpp_svcs_ext, body)
     except NameError as e:
         raise NotImplementedError(f"Missing module hosts_impl: {e}")
     except AttributeError as e:
@@ -62,14 +62,14 @@ def hosts_id_get(id, filter=None, val=None, ):  # noqa: E501
 
     :param id: Object identifier
     :type id: str
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
     :param filter: 
     :type filter: str
     :param val: 
@@ -80,10 +80,10 @@ def hosts_id_get(id, filter=None, val=None, ):  # noqa: E501
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
 
 
 
@@ -99,7 +99,7 @@ def hosts_id_get(id, filter=None, val=None, ):  # noqa: E501
 
 
     try:
-        return hosts_impl.hosts_id_get(id, repp_cltrid, repp_svcs, accept_language, repp_svcs_ext, filter, val, body)
+        return hosts_impl.hosts_id_get(id, rpp_cltrid, rpp_svcs, accept_language, rpp_svcs_ext, filter, val, body)
     except NameError as e:
         raise NotImplementedError(f"Missing module hosts_impl: {e}")
     except AttributeError as e:
@@ -113,24 +113,24 @@ def hosts_id_head(id, ):  # noqa: E501
 
     :param id: Object identifier
     :type id: str
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
     :param body: Default request body
     :type body: str
 
     :rtype: Union[None, Tuple[None, int], Tuple[None, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
 
 
 
@@ -144,7 +144,7 @@ def hosts_id_head(id, ):  # noqa: E501
 
 
     try:
-        return hosts_impl.hosts_id_head(id, repp_cltrid, repp_svcs, accept_language, repp_svcs_ext, body)
+        return hosts_impl.hosts_id_head(id, rpp_cltrid, rpp_svcs, accept_language, rpp_svcs_ext, body)
     except NameError as e:
         raise NotImplementedError(f"Missing module hosts_impl: {e}")
     except AttributeError as e:
@@ -156,26 +156,26 @@ def hosts_id_patch(id, ):  # noqa: E501
 
      # noqa: E501
 
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
     :param id: Object identifier
     :type id: str
     :param body: Default request body
     :type body: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
 
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
 
 
 
@@ -189,7 +189,7 @@ def hosts_id_patch(id, ):  # noqa: E501
 
 
     try:
-        return hosts_impl.hosts_id_patch(repp_cltrid, repp_svcs, accept_language, id, body, repp_svcs_ext)
+        return hosts_impl.hosts_id_patch(rpp_cltrid, rpp_svcs, accept_language, id, body, rpp_svcs_ext)
     except NameError as e:
         raise NotImplementedError(f"Missing module hosts_impl: {e}")
     except AttributeError as e:
@@ -201,24 +201,24 @@ def hosts_post():  # noqa: E501
 
      # noqa: E501
 
-    :param repp_cltrid: Client transaction identifier
-    :type repp_cltrid: str
-    :param repp_svcs: Namespace used
-    :type repp_svcs: str
+    :param rpp_cltrid: Client transaction identifier
+    :type rpp_cltrid: str
+    :param rpp_svcs: Namespace used
+    :type rpp_svcs: str
     :param accept_language: Language used for response
     :type accept_language: str
     :param body: Default request body
     :type body: str
-    :param repp_svcs_ext: Extension namespace used
-    :type repp_svcs_ext: str
+    :param rpp_svcs_ext: Extension namespace used
+    :type rpp_svcs_ext: str
 
     :rtype: Union[str, Tuple[str, int], Tuple[str, int, Dict[str, str]]
     """
 
-    repp_cltrid = request.headers.get('repp_cltrid')
-    repp_svcs = request.headers.get('repp_svcs')
+    rpp_cltrid = request.headers.get('rpp_cltrid')
+    rpp_svcs = request.headers.get('rpp_svcs')
     accept_language = request.headers.get('accept_language')
-    repp_svcs_ext = request.headers.get('repp_svcs_ext')
+    rpp_svcs_ext = request.headers.get('rpp_svcs_ext')
 
 
 
@@ -231,7 +231,7 @@ def hosts_post():  # noqa: E501
 
 
     try:
-        return hosts_impl.hosts_post(repp_cltrid, repp_svcs, accept_language, body, repp_svcs_ext)
+        return hosts_impl.hosts_post(rpp_cltrid, rpp_svcs, accept_language, body, rpp_svcs_ext)
     except NameError as e:
         raise NotImplementedError(f"Missing module hosts_impl: {e}")
     except AttributeError as e:

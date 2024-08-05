@@ -488,35 +488,35 @@ components:
       schema:
          type: string
     p_cltrid:
-      name: REPP-cltrid
+      name: RPP-cltrid
       description: Client transaction identifier
       in: header
       schema:
         type: string
       required: true
     p_svcs:
-      name: REPP-svcs
+      name: RPP-svcs
       description: Namespace used
       in: header
       schema:
         type: string
       required: true
     p_svcs-ext:
-      name: REPP-svcs-ext
+      name: RPP-svcs-ext
       description: Extension namespace used
       in: header
       schema:
         type: string
       required: false
     p_authinfo:
-      name: REPP-authInfo
+      name: RPP-authInfo
       description: Object authorization details
       in: header
       schema:
         type: string
       required: false
     p_roid:
-      name: REPP-Roid
+      name: RPP-Roid
       description: Object linked to authorization
       in: header
       schema:
@@ -605,37 +605,37 @@ components:
     200okNoBody:
       description: OK
       headers:
-        REPP-cltrid:
+        RPP-cltrid:
           $ref: '#/components/headers/cltrid'
-        REPP-svtrid:
+        RPP-svtrid:
           $ref: '#/components/headers/svtrid'
-        REPP-eppcode:
+        RPP-eppcode:
           $ref: '#/components/headers/eppcode'
-        REPP-Queue-Size:
+        RPP-Queue-Size:
           $ref: '#/components/headers/queue-size'
     422ErrorNoBody:
       description:  Unprocessable Content
       headers:
-        REPP-cltrid:
+        RPP-cltrid:
           $ref: '#/components/headers/cltrid'
-        REPP-svtrid:
+        RPP-svtrid:
           $ref: '#/components/headers/svtrid'
-        REPP-eppcode:
+        RPP-eppcode:
           $ref: '#/components/headers/eppcode'
     200okCheckNoBody:
       description: OK
       headers:
-        REPP-cltrid:
+        RPP-cltrid:
           $ref: '#/components/headers/cltrid'
-        REPP-svtrid:
+        RPP-svtrid:
           $ref: '#/components/headers/svtrid'
-        REPP-eppcode:
+        RPP-eppcode:
           $ref: '#/components/headers/eppcode'
-        REPP-Queue-Size:
+        RPP-Queue-Size:
           $ref: '#/components/headers/queue-size'
-        REPP-Check-Avail:
+        RPP-Check-Avail:
           $ref: '#/components/headers/check-avail'
-        REPP-Check-Reason:
+        RPP-Check-Reason:
           $ref: '#/components/headers/check-reason'
     200okWithBody:
       description: OK
@@ -644,13 +644,13 @@ components:
            schema:
              type: string
       headers:
-        REPP-cltrid:
+        RPP-cltrid:
           $ref: '#/components/headers/cltrid'
-        REPP-svtrid:
+        RPP-svtrid:
           $ref: '#/components/headers/svtrid'
-        REPP-eppcode:
+        RPP-eppcode:
           $ref: '#/components/headers/eppcode'
-        REPP-Queue-Size:
+        RPP-Queue-Size:
           $ref: '#/components/headers/queue-size'
     422ErrorBody:
       description: Unprocessable Content
@@ -659,11 +659,11 @@ components:
            schema:
              type: string
       headers:
-        REPP-cltrid:
+        RPP-cltrid:
           $ref: '#/components/headers/cltrid'
-        REPP-svtrid:
+        RPP-svtrid:
           $ref: '#/components/headers/svtrid'
-        REPP-eppcode:
+        RPP-eppcode:
           $ref: '#/components/headers/eppcode'
       
   requestBodies:
