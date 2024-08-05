@@ -25,6 +25,7 @@ https://github.com/spec-first/connexion/issues/788#issuecomment-1840442504
 
 ```
 export API_GEN_OUTPUT_DIR=/tmp/rpp
+export API_GEN_MODULE_NAME=rpp_py_flask_server
 ```
 
 ### Generate server
@@ -33,7 +34,7 @@ Python Flask server stub
 
 ```
 openapi-generator generate -g python-flask -i openapi_merged.yaml  -t ./templates/mustache/server/python-flask -o $API_GEN_OUTPUT_DIR \
-   --additional-properties packageName=rpp_py_flask_server
+   --additional-properties packageName=$API_GEN_MODULE_NAME
 ```
 
 #### Start server
@@ -41,7 +42,7 @@ openapi-generator generate -g python-flask -i openapi_merged.yaml  -t ./template
 ```
 cd $API_GEN_OUTPUT_DIR
 pip3 install -r requirements.txt
-python3 -m openapi_server
+python3 -m $API_GEN_MODULE_NAME
 ```
 
 #### API URL
