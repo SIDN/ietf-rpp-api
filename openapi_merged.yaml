@@ -2477,7 +2477,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/DomainCreateRequest'
+              $ref: '#/components/schemas/epp_readWriteType'
         required: true
       responses:
         '200':

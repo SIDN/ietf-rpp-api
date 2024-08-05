@@ -131,7 +131,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref:  '#/components/schemas/DomainCreateRequest'
+              $ref: '#/components/schemas/epp_readWriteType'
       responses:
           '200':
             $ref: '#/components/responses/200okWithBody'
