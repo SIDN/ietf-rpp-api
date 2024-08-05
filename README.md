@@ -1,4 +1,4 @@
-# Generating APi Client and Server
+# RESTful Provisioning Protocol (RPP) API
 
 ## Schema dependencies
 
