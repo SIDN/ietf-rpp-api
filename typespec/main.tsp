@@ -14,7 +14,7 @@ namespace rpp {
     }
 
     @route("/domains")
-    interface domains extends EntityCollection<Domain> {
+    interface domains extends EntityCollection<Domain>, EntityCollectionTransferrable<Domain> {
     }
 
     @route("/hosts")
@@ -32,10 +32,11 @@ namespace rpp {
     interface EntityCollection<T> {
 
         // Check
-        @head op Check(entity: T) : T;
+        @head op Check(...T) : T;
 
-        // Create
-        @post op Create(entity: T) : T;
+        // Check
+        //@overload(Create) // this does not work as in https://typespec.io/docs/standard-library/built-in-decorators/
+        @post op Create(...T, @header Expect?: "100-continue") : T;
 
         // Delete
         @route("/{id}")
@@ -49,26 +50,6 @@ namespace rpp {
         @route("/{id}/renewals")
         @post op Renew(id: string) : T[];
 
-        // Transfer Request
-        @route("/{id}/transfers")
-        @post op TransferRequest(id: string) : T[];
-
-        // Transfer Query
-        @route("/{id}/transfers/latest")
-        @get op TransferQuery(id: string) : T;
-
-        // Cancel
-        @route("/{id}/transfers/latest")
-        @delete op TransferCancel(id: string) : T;
-
-        // Approve
-        @route("/{id}/transfers/latest")
-        @patch op TransferApprove(id: string) : T;
-
-        // Reject
-        @route("/{id}/transfers/latest")
-        @post op TransferReject(id: string) : T;
-
         // Update
         @route("/{id}")
         @patch op Update(id: string, entity: T) : T;
@@ -81,25 +62,47 @@ namespace rpp {
 
     }
 
+    interface EntityCollectionTransferrable<T> {
+        // Transfer Request
+        @route("/{id}/transfer")
+        @put op TransferRequest(id: string) : T[];
+
+        // Transfer Query
+        @route("/{id}/transfer")
+        @get op TransferQuery(id: string) : T;
+
+        // Cancel
+        @route("/{id}/transfer")
+        @delete op TransferCancel(id: string) : T;
+
+        // Approve
+        @route("/{id}/transfer/approval")
+        @put op TransferApprove(id: string) : T;
+
+        // Reject
+        @route("/{id}/transfer/rejection")
+        @put op TransferReject(id: string) : T;
+    }
+
     model Domain {
         name: string;
         duration?: duration;
-        registrant: Registrant[];
-        authInfo: {
-            pw: string;
-            hash: string;
+        registrant?: string[];
+        authInfo?: {
+            pw?: string;
+            hash?: string;
         };
-        ns: {
-            hostObj: HostInfo[];
-            hostAttr: HostInfo[];
+        ns?: {
+            hostObj?: HostInfo[];
+            hostAttr?: HostInfo[];
         };
-        contacts: ContactReference[];
-        dnsSEC : DnsSec[];
+        contacts?: ContactReference[];
+        dnsSEC? : DnsSec[];
       }
 
     model HostInfo {
         name: string;
-        addr: {
+        addr?: {
             "ipv4": string[];
             "ipv6": string[];
         };
@@ -107,7 +110,6 @@ namespace rpp {
 
     model Registrant {
         id: string;
-        name: string;
     }
 
     model DnsSec {
@@ -118,7 +120,7 @@ namespace rpp {
     }
 
     model ContactReference {
-        value: Contact;
+        value: string;
         type: ContactType[];
     }
 

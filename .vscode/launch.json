@@ -6,12 +6,15 @@
     "configurations": [
         
         {
-            "name": "Python: rpp_py_flask_server",
+            "name": "Python: rpp_server_python_connexion",
             "type": "debugpy",
             "request": "launch",
-            "module": "rpp_py_flask_server",
+            "module": "uvicorn",
+            "args": [
+                "run:app"
+            ],
             "console": "integratedTerminal",
-            "cwd": "${workspaceFolder}/src/rpp_py_flask_server"
+            "cwd": "${workspaceFolder}/rpp_server_python_connexion/src"
         }
     ]
 }
